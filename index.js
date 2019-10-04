@@ -24,7 +24,11 @@ function main(){
            $("#" + "D" + original).remove();
            $("#" + original).remove();
         }else{
-            $(id).attr("class", "crossed");
+            if($(id).attr("class") == "crossed")
+                $(id).attr("class", "");
+            else
+                $(id).attr("class", "crossed");
+
         }
     });
 }
